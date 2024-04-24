@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <title>Kinobilletter</title>
+</head>
+<body>
+<h1>Bestilling av kinobilleter</h1>
+<script src="index.js"></script>
+<table>
+  <tr>
+    <td>Velg film:</td>
+    <td>
+      <select id="film">
+        <option value="" disabled selected>Velg en film</option>
+        <option value="Star Wars">Star Wars</option>
+        <option value="Mission Impossible">Mission Impossible</option>
+        <option value="Dune">Dune</option>
+      </select>
+    </td>
+    <td><p id="feilFilm" style="color:red"></p></td>
+  </tr>
+  <tr>
+    <td>
+      Antall:
+    </td>
+    <td>
+      <input type="text" id="antall" pattern="\d*" title="Vennligst skriv inn et tall.">
+    </td>
+    <td>
+      <p id="feilAntall" style="color:red"></p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>Fornavn:</td>
+    <td><input type="text" id="fornavn"></td>
+    <td><p id="feilFornavn" style="color:red"></p></td>
+  </tr>
+  <tr>
+    <td>Etternavn:</td>
+    <td><input type="text" id="etternavn"></td>
+    <td><p id="feilEtternavn" style="color:red"></p></td>
+  </tr>
+  <tr>
+    <td>Telefonnr.:</td>
+    <td><input type="text" id="telefon"></td>
+    <td><p id="feilTelefon" style="color:red"></p></td>
+  </tr>
+  <tr>
+    <td>Epost:</td>
+    <td><input type="email" id="epost"></td>
+    <td><p id="feilEpost" style="color:red"></p></td>
+  </tr>
+  <tr>
+    <td><button onclick="kjopBillett()">Kjøp billetter</button></td>
+  </tr>
+</table>
+<h2>Kjøpte billetter</h2>
+<div id="billetter"></div>
+<button onclick="slettAlleBilletter()">Slett alle billetter</button>
+</body>
+</html>
